@@ -1,4 +1,4 @@
-package com.example.locationtracker.ui.theme
+package com.example.locationtracker.presentation.ui.theme
 
 import android.app.Activity
 import android.os.Build
