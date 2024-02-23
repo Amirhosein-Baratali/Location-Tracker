@@ -15,13 +15,10 @@ import com.example.locationtracker.presentation.location_service.LocationService
 import com.example.locationtracker.presentation.location_service.LocationService.Companion.KEY_CURRENT_LOCATION_LATITUDE
 import com.example.locationtracker.presentation.location_service.LocationService.Companion.KEY_CURRENT_LOCATION_LONGITUDE
 import com.example.locationtracker.util.DateUtil
-import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
-import javax.inject.Inject
 
-@HiltViewModel
-class LocationViewModel @Inject constructor(
+class LocationViewModel(
     private val application: Application,
 ) : AndroidViewModel(application) {
 

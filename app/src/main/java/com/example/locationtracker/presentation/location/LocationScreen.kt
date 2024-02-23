@@ -1,6 +1,5 @@
 package com.example.locationtracker.presentation.location
 
-import android.annotation.SuppressLint
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -16,16 +15,15 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.locationtracker.presentation.location.components.LocationList
 import com.example.locationtracker.presentation.location.components.ToggleButton
 
-@SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun LocationScreen(
-    viewModel: LocationViewModel = hiltViewModel()
-) {
+fun LocationScreen() {
+
+    val viewModel: LocationViewModel = viewModel()
     val locationData by viewModel.locations.collectAsState()
     var started by remember { mutableStateOf(true) }
 
